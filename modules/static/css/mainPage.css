@@ -1,0 +1,241 @@
+
+.pagination {
+    margin: 30px;
+}
+.pages {
+    background-color:#16202c;
+    padding: 3px 7px;
+    border: 1px solid rgba(29,161,242,1);
+    border-radius: 2px;
+}
+.pagination > a:hover {
+    background-color: rgba(29,161,242,1);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.active_page {
+    background-color: rgba(29,161,242,1);
+    transition: 0.2s;
+    cursor: pointer; 
+    padding: 3px 7px;
+    border: 1px solid rgba(29,161,242,1);
+    border-radius: 2px;
+}
+.container {
+    display: flex;
+}
+.navbar {
+    width: 22%;
+    text-align: left;
+    border-right: 1px solid gray;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.navbar ul > li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: 70px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.navbar ul > li :hover {
+    color: dodgerblue;
+    transition: 0.2s;
+}
+.navbar ul > li > img {
+    width: 25px;
+    height: auto;
+    margin-right: 15px;
+}
+.deactivate {
+    text-align: center;
+    color: tomato;
+}
+
+
+
+
+.posts {
+    border-right: 1px solid grey;
+    width: 48%;
+}
+
+.info {
+    padding: 20px;
+    width: 30%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#16202c;
+    padding: 10px;
+    border-bottom: 2px solid white;
+  }
+  
+  .greeting {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  
+  .sinput {
+    height:35px;
+    width:330px;
+    padding-left: 20px;
+    margin:0;
+    margin-left: 20px;
+    background-color: skyblue;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .sbtn {
+    color: black;
+    border: none;
+    height:35px;
+    border-radius: 0 20px 20px 0;
+    margin:0;
+  }
+  
+
+
+
+.notice {
+    padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.light {
+    font-size: 15px;
+    color: gray;
+}
+.username {
+    font-size: 0.9em;
+}
+.username:hover {
+    text-decoration: underline;
+}
+.thumbnail {
+    width:50px;
+    height: 50px;
+    border-radius:50%;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.Thumbnail {
+    width:40px;
+    height: 40px;
+    border-radius:50%;
+    margin-right:30px;
+    margin-top: 2px;
+}
+.upload{
+    opacity: 0.5; 
+    font-size: 12px; 
+    font-style: italic;
+}
+.filter_white {
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(165deg) brightness(103%) contrast(107%);
+    width: 20px; 
+    height: auto; 
+}
+
+.empty {
+    margin-top: 50px;
+    text-align: center;
+}
+.empty > img {
+    width: 200px;
+    height: auto;
+}
+
+.trends{
+    font-size: 28px;
+    border-bottom: 2px solid white;
+}
+.trend{
+    margin:20px;
+    background-color: black;
+    border-radius: 20px;
+    color:white;
+    padding:20px;
+}
+
+.up{
+    font-size:10px;
+    margin:0;
+    color:rgb(188, 186, 186);
+}
+.middle{
+    margin:0;
+}
+.down{
+    font-size:10px;
+    margin:0;
+    padding-bottom: 4px;
+    color:rgb(188, 186, 186);
+    border-bottom: 1px solid white;
+}
+
+#follow-btn{
+    transform: translate(400%, -120%);
+    border-radius: 20px;
+    height: 35px;
+    width: 100px;
+    background-color: dodgerblue;
+}
+
+
+
+
+.bday{
+    transform:translate(-135%, 70%)
+}
+
+/* CSS for user-container */
+.user-container {
+    display: flex; /* Set display to flex */
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 10px; /* Optional margin between user containers, adjust as needed */
+    justify-content: space-between;
+  }
+  
+  /* CSS for Thumbnail (profile picture) */
+  .user-container .Thumbnail {
+    width: 50px; /* Adjust the width of the profile picture as needed */
+    height: 50px; /* Adjust the height of the profile picture as needed */
+    border-radius: 50%; /* Create a circular profile picture */
+    margin-right: 20px; /* Optional margin between profile picture and name, adjust as needed */
+    
+  }
+  
+  .user-container .n {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 1; /* Allow the .upload element to grow and take available space */
+  }
+  /* CSS for follow button */
+  .user-container button {
+    background-color: dodgerblue; /* Set the button background color */
+    color: white; /* Set the button text color */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Show pointer on hover */
+    border-radius: 20px;
+  }
+  
+  /* Optional hover effect for the follow button */
+  .user-container button:hover {
+    background-color: rgb(90, 167, 244); /* Darken the background color on hover */
+  }
+  

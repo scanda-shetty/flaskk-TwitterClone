@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    height: 100%; /* Set the body height to the full viewport height */
+}
+
+svg{
+    transform: translate(0,3%);
+}
+
+.image-bg {
+    background-color: rgba(29,161,242,1.00);
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+
+
+.user-bg {
+    background-color: rgb(21, 32, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.about {
+    color: whitesmoke;
+    transform: translate(0, -450%);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    text-align: center;
+}
+.about ul {
+    list-style: none;
+}
+
+.container {
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+.intro {
+    font-size: 30px;
+    margin-left: 100px;
+}
+.form-group{
+    margin-left: 100px;
+}
+.form_control {
+    width: 65%;
+    margin: 10px auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+.login_control {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+.form_signup {
+    width: 40%;
+    margin: 10px auto;
+    margin-left: 60px;
+    padding: 10px 15px;
+    color: whitesmoke;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 5px darkslategray;
+}
+.login_btn {
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px 15px;
+    color: whitesmoke;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 5px darkslategray; 
+}
+.icons {
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+.twitter {
+    width: 60px; 
+    height: auto; 
+    margin-left: 150px; 
+    margin-bottom: 20px;
+}
+
+#login-btn{
+    background: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: dodgerblue;
+    border: none; 
+    transform: translate(0, -12%);
+    padding: 0px 4px;
+}

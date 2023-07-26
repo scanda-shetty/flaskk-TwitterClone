@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Images/SVG/twitter.svg') }}"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/mainPage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/tweet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/constant.css') }}">
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><img src="{{ url_for('static', filename='Images/SVG/twitter.svg') }}" alt="" style="width: 50px; height: auto; margin-bottom: 30px;"></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/user.svg') }}" alt=""><a href="{{ url_for('account') }}">Profile</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/home.svg') }}" alt=""><a href="{{ url_for('dashboard') }}">Home</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/explore.svg') }}" alt=""><a href="{{ url_for('dashboard') }}">Explore</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/notification.svg') }}" alt=""><a href="{{ url_for('dashboard') }}">Notifications</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/list.svg') }}" alt=""><a href="{{ url_for('dashboard') }}">Lists</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/community.svg') }}" alt=""><a href="{{ url_for('dashboard') }}">Communities</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/saved_posts.svg') }}" alt=""><a href="{{ url_for('bookmarks') }}">Saved</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/verified.svg') }}" alt=""><a href="{{ url_for('dashboard') }}">Verified</a></li>
+                <li><img src="{{ url_for('static', filename='Images/SVG/logout.svg') }}" alt=""><a href="{{ url_for('logout') }}">logout</a></li>
+            </ul>
+        </div>
+        <div class="posts">
+            {% block pageContent %}
+            {% endblock %}
+        </div>
+        
+        <div class="info">
+            <div>
+                <form action="{{ url_for('search_profile') }}" method="POST" role="search">
+                    <input class="sinput" type="search" name="search_username" placeholder="Search..." aria-label="Search">
+                    <button class="sbtn" type="submit"><img src="{{ url_for('static', filename='Images/SVG/explore.svg') }}" alt=""></button>
+                </form></div>
+<br>
+                <div class="trend">
+                <h1 class="trends">Trending!</h1>
+                <h6 class="up">Trending in India</h6>
+                <h5 class="middle">#NarendraModi</h5>
+                <h6 class="down">1.5M Tweets</h6>
+                <br>
+                <h6 class="up">Trending in India</h6>
+                <h5 class="middle">#ViratKohli</h5>
+                <h6 class="down">1.2M Tweets</h6>
+                <br>
+                <h6 class="up">Tech - Trending</h6>
+                <h5 class="middle">#NASA</h5>
+                <h6 class="down">900K Tweets</h6>
+                <br>
+                <h6 class="up">Sports - Trending</h6>
+                <h5 class="middle">#RCB</h5>
+                <h6 style = "font-size:10px; margin:0; color:rgb(188, 186, 186);">500K Tweets</h6>
+            </div>
+            <br><br>
+            <div class="trend">
+                <h1 class="trends">Who To Follow!</h1>
+
+            {% for user in random_users %}
+            <a href="{{ url_for('viewProfile', account_id=user.id) }}"><div class="user-container">
+                    <img class="Thumbnail" src="{{ url_for('static', filename='Images/Users/profile_pics/' + user.image_file) }}" alt="">
+                    <p class="n" style="color:white; margin-right: 20px;">{{ user.username }}</p>
+                    <button>Follow</button>
+                </div></a>
+            {% endfor %}
+            </div>
+
+
+            <br><br>
+            <ul style="opacity: 0.6; display: inline; list-style: none;">
+                <li style="display: inline; margin: 0 10px;"><a href="#">Terms of Service</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="#">Privacy Policy</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="#">Cookie Policy</a></li>
+            </ul>
+            <ul style="opacity: 0.6; display: inline; list-style: none;">
+                <li style="display: inline; margin: 0 10px;"><a href="#">Accessibility</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="#">More</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="#">©2023 X_Corp.</a></li>
+            </ul>
+    </div>
+    {% block scriptContent %}
+    {% endblock %}
+
+    <script language="javascript" type="text/javascript">
+        function chngimg() {
+            var img = document.getElementById('imgplus').src;
+            if (img.indexOf("{{ url_for('static', filename='Images/SVG/bookmark.svg') }}")!=-1) {
+                document.getElementById('imgplus').src  = "{{ url_for('static', filename='Images/SVG/bookmark_save.svg') }}";
+            }
+             else {
+               document.getElementById('imgplus').src = "{{ url_for('static', filename='Images/SVG/bookmark.svg') }}";
+           }
+    
+        }
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+
+</body>
+</html>
