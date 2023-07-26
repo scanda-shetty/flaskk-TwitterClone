@@ -20,4 +20,5 @@ Run
 
 ![Screenshot (31)](https://github.com/scanda-shetty/flaskk-TwitterClone/assets/105596977/6ad2fff8-c26d-49e1-a8d9-0bde056bab2c)
 ![Screenshot (30)](https://github.com/scanda-shetty/flaskk-TwitterClone/assets/105596977/90f09173-96d0-4096-bf6d-c69f58e699eb)
-![Screenshot (29)](https://github.com/scanda-shetty/flaskk-TwitterClone/assets/105596977/43a2f896-fa67-4930-a83e-f58e4739c472)
+![Screenshot (33)](https://github.com/scanda-shetty/flaskk-TwitterClone/assets/105596977/7bc270c3-f01b-4fdd-8421-10f068c54f8c)
+
